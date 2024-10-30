@@ -1,0 +1,28 @@
+Terraform is an open-source infrastructure as code (IaC) tool created by HashiCorp.
+It allows users to define and provision data center infrastructure using a high-level configuration language called HashiCorp Configuration Language (HCL) or JSON.
+With Terraform, you can manage various cloud services and resources in a declarative way, meaning you specify the desired state of your infrastructure, and 
+Terraform automatically handles the creation, modification, and management of the resources to achieve that state.
+=========Terraform Installation==============
+Create an EC2 iNSTANCE--> CONNECT to MobaXterm--> Go to google--> search for terraform download--> select Linux OS--> Select Amazon Linux--> Copy the commands to install terraform
+paste the commands on terminal.
+> aws configure
+enter access key and secret key
+NOTE: For access key and secret keys: Got to AWS console, create an IAM user with administrative access, after creation go to security credentials and create access and secret keys.
+> type any region name
+> type any output format
+> mkdir terraform
+> cd terraform
+vim main.tf
+#####code to create an EC2 INSTANCE###########
+provider "aws" {
+region = "ap-southeast-1" 
+}
+
+resource "aws_instance" "one" {
+ami = "paste ami id"
+instance_type = "t2.micro"
+}
+:wq
+> terraform init (to initialize terraform)
+> terraform plan (to create execution plan)
+> terraform apply (create resource instance)
