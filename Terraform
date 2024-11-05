@@ -9,7 +9,7 @@ paste the commands on terminal.
 enter access key and secret key
 NOTE: For access key and secret keys: Got to AWS console, create an IAM user with administrative access, after creation go to security credentials and create access and secret keys.
 > type any region name
-> type any output format
+> type any output format (tree, table etc)
 > mkdir terraform
 > cd terraform
 vim main.tf
